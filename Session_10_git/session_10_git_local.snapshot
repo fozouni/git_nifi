@@ -24,10 +24,59 @@
         "outputPorts" : [ ],
         "position" : {
           "x" : 296.0,
-          "y" : 312.0
+          "y" : 304.0
         },
         "processGroups" : [ ],
         "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.23.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "bfbefd7c-b9b5-3099-bbfe-6e9d6b8124ec",
+          "identifier" : "d6a19e48-8ee0-34e4-85f3-9dff847cfce9",
+          "instanceIdentifier" : "efae4500-0189-1000-b516-dd3840dda657",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "CalculateRecordStats",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 880.0,
+            "y" : 224.0
+          },
+          "properties" : {
+            "record-stats-limit" : "10"
+          },
+          "propertyDescriptors" : {
+            "record-stats-limit" : {
+              "displayName" : "record-stats-limit",
+              "identifiesControllerService" : false,
+              "name" : "record-stats-limit",
+              "sensitive" : false
+            },
+            "record-stats-reader" : {
+              "displayName" : "Record Reader",
+              "identifiesControllerService" : true,
+              "name" : "record-stats-reader",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.CalculateRecordStats",
+          "yieldDuration" : "1 sec"
+        }, {
           "autoTerminatedRelationships" : [ ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
